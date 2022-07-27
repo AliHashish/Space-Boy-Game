@@ -73,4 +73,10 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("IsJumping", false);
     }
+
+    public void OnCrouching(bool isCrouching)
+    {
+        // isCrouching dh byrg3 mn el event mazboot
+        animator.SetBool("IsCrouching", isCrouching);
+    }
 }
