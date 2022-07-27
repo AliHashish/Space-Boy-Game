@@ -23,6 +23,7 @@ public class GunControl : MonoBehaviour
         
         if (Input.GetButtonDown("Fire1"))        // left mouse click
         {
+            // _particleSystem.startSpeed += Vector2.SqrMagnitude()
             emission.enabled = true;
         }
         else if (Input.GetButtonUp("Fire1"))
@@ -31,15 +32,15 @@ public class GunControl : MonoBehaviour
         }
 
         Vector3 mousePositionWrold = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 directionToMouse = handGun.transform.position - mousePositionWrold;
+        Vector3 directionToMouse = mousePositionWrold - handGun.transform.position;
         handGun.transform.LookAt(handGun.transform.position + directionToMouse);
         
         
-        Debug.Log("Mouse Position: ");  // Prints in terminal
-        Debug.Log(mousePositionWrold);
+        // Debug.Log("Mouse Position: ");  // Prints in terminal
+        // Debug.Log(mousePositionWrold);
 
-        Debug.Log("el baro7lo: ");  // Prints in terminal
-        Debug.Log(handGun.transform.position + directionToMouse);
+        // Debug.Log("el baro7lo: ");  // Prints in terminal
+        // Debug.Log(handGun.transform.position + directionToMouse - mousePositionWrold);
 
     }
 }
