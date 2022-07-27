@@ -43,4 +43,14 @@ public class GunControl : MonoBehaviour
         // Debug.Log(handGun.transform.position + directionToMouse - mousePositionWrold);
 
     }
+
+    // private void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     Debug.Log("Trigger!");  // Prints in terminal
+    // }
+
+    // private void OnCollisionEnter2D(Collision2D other) 
+    // {
+    //     Debug.Log("Trigger2!");  // Prints in terminal 
+    // }
 }
