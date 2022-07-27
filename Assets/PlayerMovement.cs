@@ -28,6 +28,10 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(Input.GetAxisRaw("Horizontal"));  // Prints in terminal
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed; // A: -1 , D: 1
 
+        // by8yr speed el animator el 3mlnah
+        // kelmet Speed mktooba hena zy el parameters henak
+        // by5leeha equal horizontalMove
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
