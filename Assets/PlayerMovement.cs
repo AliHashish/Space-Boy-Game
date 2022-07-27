@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            animator.SetBool("IsJumping", true);
         }
 
 
@@ -66,5 +67,10 @@ public class PlayerMovement : MonoBehaviour
         // Time.fixedDeltaTime btedman eno yt7rk b sor3a consistent
         jump = false;
 
+    }
+
+    public void OnLand()
+    {
+        animator.SetBool("IsJumping", false);
     }
 }
