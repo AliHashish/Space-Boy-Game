@@ -31,10 +31,7 @@ public class PlayerMovement : MonoBehaviour
         {
             jump = true;
         }
-        else if(Input.GetButtonUp("Jump"))
-        {
-            
-        }
+
 
         if (Input.GetButtonDown("Crouch"))
         {
@@ -49,9 +46,20 @@ public class PlayerMovement : MonoBehaviour
     // Gets called every fixed amount of time
     void FixedUpdate()
     {
+        if (Input.GetButton("Jump"))        // byshoof howa 3amelo hold wala la
+        {
+            // y2alel el gravity sa3etha
+            body.gravityScale = 1;
+        }
+        else
+        {
+            // rg3ha lel default
+            body.gravityScale = 3;
+        }
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         // Move(el sor3a, crouch, jump)
         // Time.fixedDeltaTime btedman eno yt7rk b sor3a consistent
         jump = false;
+
     }
 }

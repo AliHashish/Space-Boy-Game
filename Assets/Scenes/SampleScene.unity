@@ -230,7 +230,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 16.32, y: 7.81, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -248,7 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1046346491}
   m_Layer: 6
-  m_Name: Ground_Checkk
+  m_Name: Ground_Check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3128,7 +3128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a96dae8b87fe9784c886191e046552cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 1150
+  m_JumpForce: 700
   m_CrouchSpeed: 0.25
   m_MovementSmoothing: 0.05
   m_AirControl: 1
@@ -3224,7 +3224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146544272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.43, y: -2.05, z: 0}
+  m_LocalPosition: {x: 17.27, y: 4.71, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
