@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpenCloseScript : MonoBehaviour
 {
@@ -47,6 +48,7 @@ public class OpenCloseScript : MonoBehaviour
                 moved = true;
             }
 
+            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)%3);       // gets the next level
             // x++;
             // if(x%2==0)
             // {
