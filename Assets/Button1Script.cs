@@ -8,6 +8,7 @@ public class Button1Script : MonoBehaviour
     [Header("Custom Event")]
     public UnityEvent customEvent;
     
+    [SerializeField] private AudioSource buttonSoundEffect;
     // 3rft object b ay esm 3ady
     // b3dein haroo7 fy unity a-attach el object dh bl ana 3ayzo
     // public GameObject Block;
@@ -65,6 +66,8 @@ public class Button1Script : MonoBehaviour
             {
                 trigger = true;
                 pressed = !pressed;
+                // audio source
+                buttonSoundEffect.Play();
                 if(pressed)
                 {
                     Debug.Log("Pressed");
