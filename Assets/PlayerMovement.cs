@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D body;
     public Animator animator;
 
+    // [SerializeField] private AudioSource jumpSoundEffect;
+
     // Some controls
     public float runSpeed = 40f;    
     float horizontalMove = 0f;      // movement on x-axis
@@ -34,6 +36,8 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         if (Input.GetButtonDown("Jump"))
         {
+            // // audio source
+            // jumpSoundEffect.Play();
             jump = true;
             animator.SetBool("IsJumping", true);
         }

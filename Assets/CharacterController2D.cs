@@ -12,6 +12,10 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	[SerializeField] private Collider2D m_CrouchDisableCollider;				// A collider that will be disabled when crouching
 
+	/**** Ana el mzwdo ***/
+		[SerializeField] private AudioSource jumpSoundEffect;					// A jump effect sound upon jumping
+	/**** Ana el mzwdo ***/
+
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
@@ -126,6 +130,11 @@ public class CharacterController2D : MonoBehaviour
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
+			/**** Ana el mzwdo ***/
+				// audio source
+				jumpSoundEffect.Play();
+			/**** Ana el mzwdo ***/
+
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
