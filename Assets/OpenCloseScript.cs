@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OpenCloseScript : MonoBehaviour
 {
+    [SerializeField] private AudioSource winSoundEffect;
+
     private Sprite oldSprite;
     public Sprite closedDoor;
     bool moved = false;
@@ -36,6 +38,9 @@ public class OpenCloseScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = oldSprite;
+            // audio source
+            winSoundEffect.Play();
+            
             if (!moved)
             {
                 transform.Translate(0f, 0.24f, 0f);
