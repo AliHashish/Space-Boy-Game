@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class BlockTransparency : MonoBehaviour
 {
-    bool Transparent = false;
-    // GameObject g;
-    // Start is called before the first frame update
+    bool Transparent = false;   // initially msh transparent
+
 
     SpriteRenderer rend;
     Color C;
@@ -15,23 +14,19 @@ public class BlockTransparency : MonoBehaviour
     // public GameObject Block;        // el block byshawer 3la nafso
     // this.gameObject // dh el bygeeb el object 3la tool, bdl el e3aqa bta3tk
 
+    // Start is called before the first frame update
     void Start()
     {
         // m_Rigidbody2D = GetComponent<GameObject>();
+        // bageeb el lon el bade2 byh
         rend = GetComponent<SpriteRenderer> ();
         C = rend.material.color;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void TriggerTransparency()
     {
-        // Debug.Log("d5l Trigger Transparency bta3t block 1: ");  // Prints in terminal
-        // Debug.Log(this.gameObject.layer);
+        // hashoof h5leeh transparent wala opaque
         if (Transparent)
         {
             C.a = 1f;
@@ -40,7 +35,7 @@ public class BlockTransparency : MonoBehaviour
             // aw opaque ad eih y3ny a2sod
 
             // el mfrood h8yr el layer le ActiveInteractible
-            this.gameObject.layer = 8;    // b8yr el layer
+            this.gameObject.layer = 8;    // b8yr el layer, 8 dh rakamo
             
         }
         else
@@ -52,6 +47,6 @@ public class BlockTransparency : MonoBehaviour
             // el mfrood h8yr el layer le inactiveInteractible
             this.gameObject.layer = 9;    // b8yr el layer
         }
-        Transparent = !Transparent;
+        Transparent = !Transparent;     // ba3kes el state
     }
 }

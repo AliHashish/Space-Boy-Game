@@ -11,9 +11,9 @@ public class GunControl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      _particleSystem = GameObject.Find("HandGun").GetComponent<ParticleSystem>();
+      _particleSystem = GameObject.Find("HandGun").GetComponent<ParticleSystem>();      // barboto bl handgun el ana 3amelha
       var emission= _particleSystem.emission;
-      emission.enabled=false;
+      emission.enabled=false;                                                           // el emissions fl awl false
     }
 
     // Update is called once per frame
@@ -23,14 +23,18 @@ public class GunControl : MonoBehaviour
         
         if (Input.GetButtonDown("Fire1"))        // left mouse click
         {
-            // _particleSystem.startSpeed += Vector2.SqrMagnitude()
+            // lw das, 5leeha true
+            // _particleSystem.startSpeed += Vector2.SqrMagnitude()     // lw 3ayez t3adel el speed
             emission.enabled = true;
         }
         else if (Input.GetButtonUp("Fire1"))
         {
+            // lw sab, 5leeha false
             emission.enabled = false;
         }
 
+
+        // 3lshan yemshy wara el mouse
         Vector3 mousePositionWrold = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 directionToMouse = mousePositionWrold - handGun.transform.position;
         handGun.transform.LookAt(handGun.transform.position + directionToMouse);

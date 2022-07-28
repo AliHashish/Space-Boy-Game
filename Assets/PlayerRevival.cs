@@ -4,22 +4,9 @@ using UnityEngine;
 
 public class PlayerRevival : MonoBehaviour
 {
-    // bool respawn = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Debug.Log(transform.position);
-        
-    }
-
     public void RespawnPlayer()
     {
+        // Level 1:
         // el fl nos: 40-75
         if (transform.position.x < 40)
         {

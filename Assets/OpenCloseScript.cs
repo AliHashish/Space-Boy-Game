@@ -5,72 +5,44 @@ using UnityEngine.SceneManagement;
 
 public class OpenCloseScript : MonoBehaviour
 {
-    [SerializeField] private AudioSource winSoundEffect;
+    [SerializeField] private AudioSource winSoundEffect;        // Sound effects
 
-    private Sprite oldSprite;
-    public Sprite closedDoor;
-    bool moved = false;
-    // bool reachedDoor = false;
-    // int x = 0;
+    private Sprite oldSprite;               // el sprite dyh el sora, hena dyh el sora el 2adeema (bab maftoo7)
+    public Sprite closedDoor;               // lama a2felo, h8yr el sora
+    bool moved = false;                     // boolean by2oly a2felo wala la
+    
     // Start is called before the first frame update
     void Start()
     {
-        oldSprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = closedDoor;
+        oldSprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;      // b5leeh y-save el sora el 2adeema (bab maftoo7)
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = closedDoor;     // y7ot wa7da mkanha (bab ma2fool)
         
         // h7rkha 0.24 le ta7t
-        transform.Translate(0f, -0.24f, 0f);
+        transform.Translate(0f, -0.24f, 0f);    // 3lshan 5ater el bab el ma2fool sorto a3la seka
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // el other dh howa el object el 5abat el button
+        // el other dh howa el object el 5abat el bab
 
-        // Debug.Log("Da5al On Trigger bta3t button ");  // Prints in terminal
-        
-        // y3ny bashoof el 5bt el button dh el player wala la
+        // y3ny bashoof el 5bt el bab dh el player wala la
         // Tag dyh htla2eeha fy awl satr kda ganb el layer fl player
         if (other.gameObject.CompareTag("Player"))
         {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = oldSprite;
+            this.gameObject.GetComponent<SpriteRenderer>().sprite = oldSprite;  // b7ot soret el bab el maftoo7
+            
             // audio source
-            winSoundEffect.Play();
+            winSoundEffect.Play();      // bsh8l sot
             
             if (!moved)
             {
-                transform.Translate(0f, 0.24f, 0f);
-                moved = true;
+                transform.Translate(0f, 0.24f, 0f);     // brg3 a7rko le mkano el 2adeem
+                moved = true;                           // 3lshan my7rakoosh kaza mara, hya mara wa7da bs
             }
 
             SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)%3);       // gets the next level
-            // x++;
-            // if(x%2==0)
-            // {
-            //     x=0;    // b7eith adman en el x mt3mlsh overflow xD
-            //             // kan momkn ast3ml bool a7sn
-            // }
-            // else
-            // {
-            //     reachedDoor = !reachedDoor;
-            //     if(reachedDoor)
-            //     {
-            //         Debug.Log("Door Reached");
-            //         this.gameObject.GetComponent<SpriteRenderer>().sprite = oldSprite;
-            //     }
-            //     else
-            //     {
-            //         Debug.Log("Door Not Reached");
-            //         this.gameObject.GetComponent<SpriteRenderer>().sprite = closedDoor;
-            //     }
-            //     // Debug.Log(x);
-            //     // Debug.Log("Da5al el if condition kaman ");  // Prints in terminal
-            // }
+            
         }
     }
 }
