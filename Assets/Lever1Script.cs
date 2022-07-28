@@ -16,7 +16,6 @@ public class Lever1Script : MonoBehaviour
 
     bool trigger = false;
     bool pressed = false;
-    bool skip = false;
 
     private Sprite oldSprite;
     int x = 0;
@@ -52,9 +51,8 @@ public class Lever1Script : MonoBehaviour
             {
                 x=0;    // b7eith adman en el x mt3mlsh overflow xD
                         // kan momkn ast3ml bool a7sn
-                skip = !skip;
             }
-            else if (!skip)
+            else
             {
                 trigger = true;
                 pressed = !pressed;
@@ -63,12 +61,15 @@ public class Lever1Script : MonoBehaviour
                     Debug.Log("Pressed");
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = pressedLever;
                     transform.Translate(-0.57f, -0.67f, 0f);
+                    // 3ayez a-offset el checkbox 2 fl x 3lshan yozbot
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(2,0);
                 }
                 else
                 {
                     Debug.Log("NOT Pressed");
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = oldSprite;
                     transform.Translate(0.57f, 0.67f, 0f);
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0,0);
                 }
                 // Debug.Log(x);
                 // Debug.Log("Da5al el if condition kaman ");  // Prints in terminal
