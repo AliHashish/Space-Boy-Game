@@ -16,9 +16,7 @@ public class Button1Script : MonoBehaviour
     public Sprite pressedButton;        // dyh lel sora
 
     bool trigger = false;               // hal el player das 3leh
-    // bool pressed = false;               // hal howa kan mad8oot asln
-    // bool firstTime = true;
-
+    
     private Sprite oldSprite;           // sorto el 2adeema (msh pressed)
     int x = 0;                          // counter 3lshan yfawet wa7da mn el hitboxes bta3t el player
     int y = 0;
@@ -72,31 +70,13 @@ public class Button1Script : MonoBehaviour
                 buttonSoundEffect.Play();       // bsh8l el sfx
 
 
-                // b7aded anhy sora el tet7at
-                // if(pressed)             
-                // {
-                //     Debug.Log("Pressed");
-                //     this.gameObject.GetComponent<SpriteRenderer>().sprite = pressedButton;      // b8yr el sora
+                Debug.Log("OnTrigger");
+                this.gameObject.GetComponent<SpriteRenderer>().sprite = pressedButton;      // b8yr el sora
+                
 
-                //     // b7rko seka 3lshan el hitbox yozbot
-                //     transform.Translate(0f, -0.5f, 0f);
-                //     this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0,1.4f);
-                // }
-                // else
-                // {
-                    Debug.Log("OnTrigger");
-                    this.gameObject.GetComponent<SpriteRenderer>().sprite = pressedButton;      // b8yr el sora
-                    
-
-                    // b7rko seka 3lshan el hitbox yozbot
-                    // if (firstTime)
-                    // {
-                    //     firstTime = false;
-                        // transform.Translate(0f, -0.5f, 0f);
-                    transform.Translate(0f, -0.5f, 0f);
-                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0,1.4f);
-                    // }
-                // }
+                // b7rko seka 3lshan el hitbox yozbot
+                transform.Translate(0f, -0.5f, 0f);
+                this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0,1.4f);
             }
         }
     }
@@ -106,7 +86,7 @@ public class Button1Script : MonoBehaviour
         y++;
         if(y%2==0)
         {
-            y=0;    // b7eith adman en el x mt3mlsh overflow xD
+            y=0;    // b7eith adman en el y mt3mlsh overflow xD
                     // kan momkn ast3ml bool a7sn
         }
         else
