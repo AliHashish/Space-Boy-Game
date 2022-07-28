@@ -8,6 +8,8 @@ public class RespawnPoints : MonoBehaviour
     [Header("Custom Event")]
     public UnityEvent customEvent;
 
+    [SerializeField] private AudioSource respawnTeleportSoundEffect;
+
     bool respawn = false;
     // Start is called before the first frame update
     void Start()
@@ -36,7 +38,8 @@ public class RespawnPoints : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             respawn = true;
-            
+            // audio source
+            respawnTeleportSoundEffect.Play();
             // Debug.Log(x);
             // Debug.Log("Da5al el if condition kaman ");  // Prints in terminal
         }
