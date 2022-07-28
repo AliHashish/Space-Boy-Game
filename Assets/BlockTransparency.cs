@@ -25,7 +25,7 @@ public class BlockTransparency : MonoBehaviour
     public void TriggerTransparency()
     {
         // Debug.Log("d5l Trigger Transparency bta3t block 1: ");  // Prints in terminal
-        Debug.Log(rend.sortingLayerID);
+        // Debug.Log(rend.layer);
         if (Transparent)
         {
             C.a = 1f;
