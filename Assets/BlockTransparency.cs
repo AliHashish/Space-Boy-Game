@@ -7,9 +7,13 @@ public class BlockTransparency : MonoBehaviour
     bool Transparent = false;
     // GameObject g;
     // Start is called before the first frame update
+
+    SpriteRenderer rend;
+    Color C;
     void Start()
     {
-        
+        rend = GetComponent<SpriteRenderer> ();
+        C = rend.material.color;
     }
 
     // Update is called once per frame
@@ -18,17 +22,26 @@ public class BlockTransparency : MonoBehaviour
         
     }
 
-    void TriggerTransparency()
+    public void TriggerTransparency()
     {
+        Debug.Log("d5l Trigger Transparency bta3t block 1: ");  // Prints in terminal
+        if (Transparent)
+        {
+            C.a = 1f;
+            rend.material.color = C;
+            // rend.material.color.a = 1f; // a is alpha value, el howa transparent ad eih
+            // aw opaque ad eih y3ny a2sod
 
-        // if (Transparent)
-        // {
-        //     material.color.a = 1f; // a is alpha value, el howa transparent ad eih
-        // }
-        // else
-        // {
-        //     material.color.a = 0.5f;
-        // }
+            // el mfrood h8yr el layer le ActiveInteractible
+        }
+        else
+        {
+            // rend.material.color.a = 0.5f;
+            C.a = 0.5f;
+            rend.material.color = C;
+            
+            // el mfrood h8yr el layer le inactiveInteractible
+        }
         Transparent = !Transparent;
     }
 }
