@@ -66,7 +66,7 @@ public class Lever1Script : MonoBehaviour
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = pressedLever;
                     transform.Translate(-0.57f, -0.67f, 0f);
                     // 3ayez a-offset el checkbox 2 fl x 3lshan yozbot
-                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(2,0);
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(2,2.3f);
                 }
                 else
                 {
