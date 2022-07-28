@@ -41,8 +41,18 @@ public class OpenCloseScript : MonoBehaviour
                 moved = true;                           // 3lshan my7rakoosh kaza mara, hya mara wa7da bs
             }
 
-            SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)%3);       // gets the next level
+            // Lazem startcoroutine msh TimeDelay() 3la tool, l2naha IEnumerator, msh function 3adya
+            StartCoroutine(TimeDelay());
+            // SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)%3);       // gets the next level
             
         }
+    }
+
+
+    IEnumerator TimeDelay()
+    {
+        yield return new WaitForSeconds(0.85f);      // waits for 1.5 seconds abl ma yen2el el level
+                                                    // dh 3lshan 5ater nel7a2 nesma3 el o8nya
+        SceneManager.LoadScene((SceneManager.GetActiveScene().buildIndex + 1)%3);       // gets the next level
     }
 }
