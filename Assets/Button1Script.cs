@@ -39,11 +39,11 @@ public class Button1Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Da5al On Trigger bta3t button ");  // Prints in terminal
+        // Debug.Log("Da5al On Trigger bta3t button ");  // Prints in terminal
         if (other.gameObject.CompareTag("Player"))
         {
             trigger = true;
-            Debug.Log("Da5al el if condition kaman ");  // Prints in terminal
+            // Debug.Log("Da5al el if condition kaman ");  // Prints in terminal
         }
     }
 }

@@ -24,7 +24,8 @@ public class BlockTransparency : MonoBehaviour
 
     public void TriggerTransparency()
     {
-        Debug.Log("d5l Trigger Transparency bta3t block 1: ");  // Prints in terminal
+        // Debug.Log("d5l Trigger Transparency bta3t block 1: ");  // Prints in terminal
+        Debug.Log(rend.sortingLayerID);
         if (Transparent)
         {
             C.a = 1f;
@@ -33,6 +34,7 @@ public class BlockTransparency : MonoBehaviour
             // aw opaque ad eih y3ny a2sod
 
             // el mfrood h8yr el layer le ActiveInteractible
+            
         }
         else
         {
