@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8adb1a3fa750e4a89d441b0c438564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Block: {fileID: 25176728}
 --- !u!1 &116040755
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +696,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 80.85, y: -1.2799997, z: -10}
+  m_LocalPosition: {x: 28.350002, y: 2.1200004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1374,18 +1375,19 @@ MonoBehaviour:
   customEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 25176728}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 25176733}
+        m_TargetAssemblyTypeName: BlockTransparency, Assembly-CSharp
+        m_MethodName: TriggerTransparency
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  Block: {fileID: 25176728}
 --- !u!1 &2059056725
 GameObject:
   m_ObjectHideFlags: 0
@@ -9448,7 +9450,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146544272}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 82.2, y: -3.7, z: 0}
+  m_LocalPosition: {x: 29.7, y: -0.3, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

@@ -10,8 +10,13 @@ public class BlockTransparency : MonoBehaviour
 
     SpriteRenderer rend;
     Color C;
+
+    // private GameObject m_Rigidbody2D;    // hyshawer 3l block nafso
+    public GameObject Block;
+
     void Start()
     {
+        // m_Rigidbody2D = GetComponent<GameObject>();
         rend = GetComponent<SpriteRenderer> ();
         C = rend.material.color;
     }
@@ -25,7 +30,7 @@ public class BlockTransparency : MonoBehaviour
     public void TriggerTransparency()
     {
         // Debug.Log("d5l Trigger Transparency bta3t block 1: ");  // Prints in terminal
-        // Debug.Log(rend.layer);
+        // Debug.Log(Block.layer);
         if (Transparent)
         {
             C.a = 1f;
@@ -34,6 +39,7 @@ public class BlockTransparency : MonoBehaviour
             // aw opaque ad eih y3ny a2sod
 
             // el mfrood h8yr el layer le ActiveInteractible
+            Block.layer = 8;
             
         }
         else
@@ -43,6 +49,7 @@ public class BlockTransparency : MonoBehaviour
             rend.material.color = C;
             
             // el mfrood h8yr el layer le inactiveInteractible
+            Block.layer = 9;
         }
         Transparent = !Transparent;
     }

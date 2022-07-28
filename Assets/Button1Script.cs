@@ -39,7 +39,12 @@ public class Button1Script : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // el other dh howa el object el 5abat el button
+
         // Debug.Log("Da5al On Trigger bta3t button ");  // Prints in terminal
+        
+        // y3ny bashoof el 5bt el button dh el player wala la
+        // Tag dyh htla2eeha fy awl satr kda ganb el layer fl player
         if (other.gameObject.CompareTag("Player"))
         {
             trigger = true;
