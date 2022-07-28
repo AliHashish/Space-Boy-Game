@@ -12,7 +12,7 @@ public class BlockTransparency : MonoBehaviour
     Color C;
 
     // private GameObject m_Rigidbody2D;    // hyshawer 3l block nafso
-    public GameObject Block;
+    public GameObject Block;        // el block byshawer 3la nafso
 
     void Start()
     {
@@ -39,7 +39,7 @@ public class BlockTransparency : MonoBehaviour
             // aw opaque ad eih y3ny a2sod
 
             // el mfrood h8yr el layer le ActiveInteractible
-            Block.layer = 8;
+            Block.layer = 8;    // b8yr el layer
             
         }
         else
@@ -49,7 +49,7 @@ public class BlockTransparency : MonoBehaviour
             rend.material.color = C;
             
             // el mfrood h8yr el layer le inactiveInteractible
-            Block.layer = 9;
+            Block.layer = 9;    // b8yr el layer
         }
         Transparent = !Transparent;
     }

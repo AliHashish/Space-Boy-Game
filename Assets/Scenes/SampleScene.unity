@@ -322,6 +322,7 @@ GameObject:
   - component: {fileID: 254434416}
   - component: {fileID: 254434417}
   - component: {fileID: 254434418}
+  - component: {fileID: 254434419}
   m_Layer: 10
   m_Name: Lever1
   m_TagString: Untagged
@@ -420,8 +421,36 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.549865, y: 7.954582}
+  m_Size: {x: 19.626198, y: 19.642883}
   m_EdgeRadius: 0
+--- !u!114 &254434419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254434415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1616b541b3adee549b86b567cca25af2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 894294343}
+        m_TargetAssemblyTypeName: BlockTransparency, Assembly-CSharp
+        m_MethodName: TriggerTransparency
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Block: {fileID: 0}
 --- !u!1 &421418495
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +725,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.350002, y: 2.1200004, z: -10}
+  m_LocalPosition: {x: 12.750001, y: 17.02, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -869,6 +898,7 @@ GameObject:
   - component: {fileID: 894294340}
   - component: {fileID: 894294342}
   - component: {fileID: 894294341}
+  - component: {fileID: 894294343}
   m_Layer: 8
   m_Name: Block2
   m_TagString: Untagged
@@ -969,6 +999,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &894294343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894294339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca8adb1a3fa750e4a89d441b0c438564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Block: {fileID: 894294339}
 --- !u!1 &1007110650
 GameObject:
   m_ObjectHideFlags: 0
@@ -9450,7 +9493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146544272}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 29.7, y: -0.3, z: 0}
+  m_LocalPosition: {x: 14.1, y: 14.6, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
