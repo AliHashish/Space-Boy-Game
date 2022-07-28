@@ -6,6 +6,7 @@ public class OpenCloseScript : MonoBehaviour
 {
     private Sprite oldSprite;
     public Sprite closedDoor;
+    bool moved = false;
     // bool reachedDoor = false;
     // int x = 0;
     // Start is called before the first frame update
@@ -13,6 +14,9 @@ public class OpenCloseScript : MonoBehaviour
     {
         oldSprite = this.gameObject.GetComponent<SpriteRenderer>().sprite;
         this.gameObject.GetComponent<SpriteRenderer>().sprite = closedDoor;
+        
+        // h7rkha 0.24 le ta7t
+        transform.Translate(0f, -0.24f, 0f);
     }
 
     // Update is called once per frame
@@ -32,6 +36,12 @@ public class OpenCloseScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = oldSprite;
+            if (!moved)
+            {
+                transform.Translate(0f, 0.24f, 0f);
+                moved = true;
+            }
+
             // x++;
             // if(x%2==0)
             // {

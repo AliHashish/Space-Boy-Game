@@ -16,6 +16,7 @@ public class Lever1Script : MonoBehaviour
 
     bool trigger = false;
     bool pressed = false;
+    bool skip = false;
 
     private Sprite oldSprite;
     int x = 0;
@@ -46,12 +47,14 @@ public class Lever1Script : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             x++;
+            Debug.Log(x);
             if(x%2==0)
             {
                 x=0;    // b7eith adman en el x mt3mlsh overflow xD
                         // kan momkn ast3ml bool a7sn
+                skip = !skip;
             }
-            else
+            else if (!skip)
             {
                 trigger = true;
                 pressed = !pressed;
@@ -59,11 +62,13 @@ public class Lever1Script : MonoBehaviour
                 {
                     Debug.Log("Pressed");
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = pressedLever;
+                    transform.Translate(-0.57f, -0.67f, 0f);
                 }
                 else
                 {
                     Debug.Log("NOT Pressed");
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = oldSprite;
+                    transform.Translate(0.57f, 0.67f, 0f);
                 }
                 // Debug.Log(x);
                 // Debug.Log("Da5al el if condition kaman ");  // Prints in terminal
