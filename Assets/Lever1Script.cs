@@ -9,6 +9,8 @@ public class Lever1Script : MonoBehaviour
     [Header("Custom Event")]
     public UnityEvent customEvent;
     
+    [SerializeField] private AudioSource leverSoundEffect;
+
     // 3rft object b ay esm 3ady
     // b3dein haroo7 fy unity a-attach el object dh bl ana 3ayzo
     // public GameObject Block;
@@ -56,6 +58,8 @@ public class Lever1Script : MonoBehaviour
             {
                 trigger = true;
                 pressed = !pressed;
+                // audio source
+                leverSoundEffect.Play();
                 if(pressed)
                 {
                     Debug.Log("Pressed");

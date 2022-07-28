@@ -73,12 +73,14 @@ public class Button1Script : MonoBehaviour
                     Debug.Log("Pressed");
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = pressedButton;
                     transform.Translate(0f, -0.5f, 0f);
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0,1.4f);
                 }
                 else
                 {
                     Debug.Log("NOT Pressed");
                     this.gameObject.GetComponent<SpriteRenderer>().sprite = oldSprite;
                     transform.Translate(0f, 0.5f, 0f);
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0,0);
                 }
                 // Debug.Log(x);
                 // Debug.Log("Da5al el if condition kaman ");  // Prints in terminal
