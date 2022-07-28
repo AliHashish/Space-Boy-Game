@@ -10,7 +10,7 @@ public class Button1Script : MonoBehaviour
     
     // 3rft object b ay esm 3ady
     // b3dein haroo7 fy unity a-attach el object dh bl ana 3ayzo
-    public GameObject Block;
+    // public GameObject Block;
     
     public Sprite pressedButton;
 

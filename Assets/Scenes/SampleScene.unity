@@ -247,7 +247,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8adb1a3fa750e4a89d441b0c438564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Block: {fileID: 25176728}
 --- !u!1 &116040755
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +449,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Block: {fileID: 0}
+  pressedLever: {fileID: 21300000, guid: dae48ec960232b34a92c783b2f0d898f, type: 3}
 --- !u!1 &421418495
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,7 +724,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.750001, y: 17.02, z: -10}
+  m_LocalPosition: {x: 30.650002, y: -1.4799998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1011,7 +1010,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8adb1a3fa750e4a89d441b0c438564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Block: {fileID: 894294339}
 --- !u!1 &1007110650
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1264,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0395777, y: 1}
+    m_SensorSize: {x: 0.67810035, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1349,7 +1347,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.089987, y: 5.020607}
+  m_Size: {x: 16.149412, y: 8.790785}
   m_EdgeRadius: 0
 --- !u!212 &1376385904
 SpriteRenderer:
@@ -1430,7 +1428,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Block: {fileID: 25176728}
+  pressedButton: {fileID: 21300000, guid: b829d10610a38ba489e0bb2906ea25c1, type: 3}
 --- !u!1 &2059056725
 GameObject:
   m_ObjectHideFlags: 0
@@ -8183,7 +8181,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 183
+      m_Bits: 439
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -9493,7 +9491,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2146544272}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 14.1, y: 14.6, z: 0}
+  m_LocalPosition: {x: 32, y: -3.9, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
