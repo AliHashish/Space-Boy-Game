@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WallBreak : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class WallBreak : MonoBehaviour
     Color C;
     int healthPoints = 5;
 
+    private Text healthText;
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<SpriteRenderer> ();
         C = rend.material.color;
+        healthText = GetComponentInChildren<Text> ();
     }
 
     // Update is called once per frame
@@ -54,6 +57,6 @@ public class WallBreak : MonoBehaviour
 
         }
         Debug.Log(healthPoints);
-        
+        healthText.text = "" + healthPoints;
     }
 }
